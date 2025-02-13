@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page</title>
+  </head>
+  <body>
+    <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="/addProducts">Add product</a>
+        </li>
+        <li>
+          <a href="/seeProducts">See product</a>
+        </li>
+      </ul>
+    </nav>
+    </header>
+      <main>
+        <h1>Admin</h1>
+        <p>All the products will be here!</p>
+      <form action="/admin/addProduct" method="post">
+        <input type="text" name="title"/>
+        <button type="submit">Submit</button>
+      </form>
+      </main>
+  </body>
+</html>

@@ -1,12 +1,23 @@
 const express = require('express')
+const bodyParser = require('body-parser')
+const path = require('path')
+require('dotenv').config()
+
+
 const adminRoutes = require('./routes/adminRoutes')
+const shopRoutes = require('./routes/shopRoutes')
 
 const app = express()
-const PORT = 8000
+const port = process.env.PORT
 
+app.use(bodyParser.urlencoded({extended: true}))
 app.use("/admin", adminRoutes)
+app.use("/shop", shopRoutes)
+app.use("/", (req,res) => {
+    res.sendFile(path.join(__dirname, 'resources', 'views', 'notFound.html'))
+})
 
 
-app.listen(PORT, ()=> {
-    console.log(`Running on port ${PORT}.`)
+app.listen(port, ()=> {
+    console.log(`Running on port ${port}.`)
 })
