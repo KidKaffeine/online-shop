@@ -3,28 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/shop.css" />
+    <title>Shop</title>
   </head>
   <body>
     <header>
-    <nav>
-      <ul>
-        <li>
-          <a href="/cart">Cart</a>
-        </li>
-        <li>
-          <a href="/allProducts">Products</a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="navbar">
+        <ul class="list">
+          <li class="list_item">
+            <a href="/admin/products" class="nav_link">Add product</a>
+          </li>
+          <li class="list_item">
+            <a href="/shop/allProducts" class="nav_link">Products</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-      <main>
-        <h1>Shop</h1>
-        <p>Shop will be here!</p>
-      <form action="/addTocart" method="post">
-        <input type="text" name="title"/>
-        <button type="submit">Submit</button>
-      </form>
-      </main>
+    <main class="shop_main">
+      <h1 class="shop_heading">Shop</h1>
+      <article class="product_article">
+        <h2 class="product_title">Whatever title</h2>
+        <div class="img_container">
+          <img src="https://cdn.pixabay.com/photo/2015/11/19/21/10/glasses-1052010_640.jpg" alt="book" class="img" width="150px"/>
+        </div>
+        <div class="product_info_container">
+          <h4 class="product_price">Price: 20$</h4>
+          <button class="add_to_cart_btn">Add to cart</button>
+        </div>
+      </article>
+    </main>
   </body>
 </html>

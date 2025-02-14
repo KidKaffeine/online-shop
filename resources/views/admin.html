@@ -3,28 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/admin.css">
     <title>Admin Page</title>
   </head>
   <body>
     <header>
-    <nav>
-      <ul>
-        <li>
-          <a href="/addProducts">Add product</a>
-        </li>
-        <li>
-          <a href="/seeProducts">See product</a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="navbar">
+        <ul class="list">
+          <li class="list_item">
+            <a href="/admin/products" class="nav_link">Add product</a>
+          </li>
+          <li class="list_item">
+            <a href="/shop/allProducts" class="nav_link">Products</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-      <main>
-        <h1>Admin</h1>
-        <p>All the products will be here!</p>
-      <form action="/admin/addProduct" method="post">
-        <input type="text" name="title"/>
-        <button type="submit">Submit</button>
-      </form>
+      <main class="admin_main">
+        <h1 class="admin_heading">Add Product</h1>
+        <form action="/admin/addProduct" method="post" class="add_product_form">
+          <label id="title" class="title_label">Title:</label>
+          <input type="text" name="title" id="title" class="title_input">
+        </form>
       </main>
   </body>
 </html>

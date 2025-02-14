@@ -9,7 +9,7 @@ router.get("/allProducts", (req, res) => {
 
 router.post("/addToCart", (req, res) => {
     console.log(req.body)
-    res.redirect('/allProducts')
+    res.redirect('/shop/allProducts')
 })
 
 module.exports = router;

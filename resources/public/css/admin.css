@@ -1,0 +1,67 @@
+body {
+    box-sizing: border-box;
+    background-color: rgb(145, 171, 150);
+    height: 100vh;
+    margin: 0;
+}
+
+.navbar {
+    background-color: rgb(189, 232, 218);
+    height: 50px;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    height: 100%;
+}
+
+.list_item .nav_link {
+    text-decoration: none;
+    font-size: 20px;
+    color:rgb(145, 171, 150);
+    font-family: "Roboto Condensed", serif;
+}
+
+.admin_main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin_heading {
+    margin-block: 20px 10px;
+    font-family: "Kanit", serif;
+    font-size: 48px;
+}
+
+.add_product_form {
+    border: solid 1px #000;
+    width: 50%;
+    padding: 15px 15px 25px 15px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title_label {
+    font-family: "Roboto Condensed", serif;
+    margin-block: 0 7px;
+}
+
+.title_input {
+    background-color: rgb(172, 180, 172);
+    height: 20px;
+    border: solid 1px #000;
+    border-radius: 3px;
+}
+
+.title_input:focus {
+    outline: none;
+    border: none;
+}

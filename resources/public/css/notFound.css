@@ -1,0 +1,39 @@
+body {
+    box-sizing: border-box;
+    background-color: rgb(145, 171, 150);
+    height: 100vh;
+    margin: 0;
+}
+
+nav {
+    background-color: rgb(189, 232, 218);
+    height: 50px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    height: 100%;
+}
+
+li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Roboto Condensed", serif;
+    color:rgb(145, 171, 150)
+}
+
+main {
+    height: 100vh;
+}
+
+h1 {
+    margin-block: 20px 0;
+    text-align: center;
+    font-family: "Kanit", serif;
+    font-size: 48px;
+}
