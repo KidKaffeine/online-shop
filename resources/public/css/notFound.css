@@ -5,12 +5,12 @@ body {
     margin: 0;
 }
 
-nav {
+.navbar {
     background-color: rgb(189, 232, 218);
     height: 50px;
 }
 
-ul {
+.list {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -20,20 +20,22 @@ ul {
     height: 100%;
 }
 
-li a {
+.list_item .nav_link {
     text-decoration: none;
     font-size: 20px;
+    color:rgb(145, 171, 150);
     font-family: "Roboto Condensed", serif;
-    color:rgb(145, 171, 150)
 }
 
-main {
+.not_found_main {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-h1 {
-    margin-block: 20px 0;
-    text-align: center;
+.not_found_heading {
+    margin-block: 20px 10px;
     font-family: "Kanit", serif;
     font-size: 48px;
 }

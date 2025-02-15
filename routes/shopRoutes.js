@@ -3,8 +3,9 @@ const path = require('path')
 
 const router = express.Router()
 
-router.get("/allProducts", (req, res) => {    
-    res.sendFile(path.join(__dirname, '../', 'resources', 'views', 'shop.html'))
+router.get("/allProducts", (req, res) => {   
+    res.render('shop', {title: "Shop"}) 
+    // res.sendFile(path.join(__dirname, '../', 'resources', 'views', 'shop.html'))
 })
 
 router.post("/addToCart", (req, res) => {
