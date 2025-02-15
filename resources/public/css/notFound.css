@@ -1,0 +1,41 @@
+body {
+    box-sizing: border-box;
+    background-color: rgb(145, 171, 150);
+    height: 100vh;
+    margin: 0;
+}
+
+.navbar {
+    background-color: rgb(189, 232, 218);
+    height: 50px;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    height: 100%;
+}
+
+.list_item .nav_link {
+    text-decoration: none;
+    font-size: 20px;
+    color:rgb(145, 171, 150);
+    font-family: "Roboto Condensed", serif;
+}
+
+.not_found_main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.not_found_heading {
+    margin-block: 20px 10px;
+    font-family: "Kanit", serif;
+    font-size: 48px;
+}
