@@ -7,8 +7,7 @@ const getAdminProducts = (req, res) => {
 const addAdminProduct = (req, res) => {
     const { title } = req.body;
     const { id } = req.body
-    productsArray.push({ title: title, id: id++ });
-    console.log(productsArray)
+    productsArray.push({ title: title, id: id });
     res.redirect("/shop/products");
 }
 
