@@ -6,7 +6,7 @@ html(lang="en")
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com", crossorigin)
         link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap")
-        link(rel="stylesheet", href="/css/notFound.css")
+        link(rel="stylesheet" href="/css/layout.css")
         block styles
         title #{title}
     body 
@@ -14,7 +14,11 @@ html(lang="en")
             nav.navbar
                 ul.list
                     li.list_item
-                        a(href="/admin/products" class="nav_link") Add product
+                        a(href="/admin/products" class=(title === "Add product" ? "active" : "")) Add product
                     li.list_item
-                        a(href="/shop/allProducts" class="nav_link") Products
+                        a(href="/shop/products" class=(title === "Shop" ? "active" : "")) Products
+                    li.list_item
+                        a(href="/shop/cart" class=(title === "Cart" ? "active" : "")) Cart
+                    li.list_item
+                        a(href="/shop" class=(title === "Homapage" ? "active" : "")) Home
         block content

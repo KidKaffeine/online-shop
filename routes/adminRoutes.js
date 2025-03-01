@@ -1,20 +1,10 @@
 const express = require("express");
-
 const router = express.Router();
 
-const productsArray = [];
+const adminControllers = require("../controllers/admin")
 
-router.get("/products", (req, res) => {
-  res.render("admin/admin", { title: "Admin Page" });
-});
+router.get("/products", adminControllers.getAdminProducts );
 
-router.post("/addProduct", (req, res) => {
-  const { title } = req.body;
-  productsArray.push({ title: title });
-  res.redirect("/shop/allProducts");
-});
+router.post("/addProduct", adminControllers.addAdminProduct );
 
-module.exports = {
-  router: router,
-  products: productsArray,
-};
+module.exports = router;

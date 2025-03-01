@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.json())
 app.use(express.static(path.join(__dirname, 'resources', 'public')))
 
-app.use("/admin", adminRoutes.router)
+app.use("/admin", adminRoutes)
 app.use("/shop", shopRoutes)
 app.use("/", (req,res) => {
     res.render('notFound', {title: "Not found"})})

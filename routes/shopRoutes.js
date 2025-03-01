@@ -1,15 +1,19 @@
 const express = require('express')
-const products = require('../routes/adminRoutes')
-
 const router = express.Router()
 
-router.get("/allProducts", (req, res) => {  
-    res.render('shop/shop', {title: "Shop", product: products.products }) 
-})
+const shopController = require('../controllers/shop')
 
-router.post("/addToCart", (req, res) => {
-    console.log(req.body)
-    res.redirect('/shop/allProducts')
-})
+
+router.get("/products", shopController.getProducts )
+
+router.get('/cart', shopController.getCart)
+
+router.get('/checkout', shopController.getCheckout )
+
+router.get('/product-detail/:id', shopController.getProductDetail)
+
+router.get('/', shopController.getHome)
+
+
 
 module.exports = router;
