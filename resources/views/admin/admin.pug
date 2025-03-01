@@ -1,0 +1,11 @@
+extends ../layouts/layout.pug 
+
+block styles 
+    link(rel="stylesheet" href="/css/admin.css")
+
+block content 
+     main.admin_main
+        h1.admin_heading Add Product
+        form(action="/admin/addProduct" method="post" class="add_product_form")
+            label(id="title" class="title_label") Title:
+            input(type="text" name="title" id="title" class="title_input")
