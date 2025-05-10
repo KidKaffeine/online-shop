@@ -1,0 +1,21 @@
+extends ../layouts/layout.pug 
+
+block styles 
+    link(rel="stylesheet", href="/css/products.css")
+
+block content    
+    main.shop_main
+        h1.shop_heading Shop
+        if product.lenght > 0
+        each prod in product
+            article.product_article
+                h2.product_title #{prod.title}
+                .img_container
+                    - var id = prod.id
+                    a(href=("/shop/product-detail/" + id))
+                        img(src="https://cdn.pixabay.com/photo/2015/11/19/21/10/glasses-1052010_640.jpg" alt="book" class="img" width="150px")
+                .product_info_container
+                    h4.product_price Price: 20$
+                    button.add_to_cart_btn Add to cart
+        else 
+            h1.shop_heading No products yet

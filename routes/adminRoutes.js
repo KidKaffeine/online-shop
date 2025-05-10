@@ -1,13 +1,10 @@
-const express = require('express')
+const express = require("express");
+const router = express.Router();
 
-const router = express.Router()
+const adminControllers = require("../controllers/admin")
 
-router.get("/products", (req, res) => {
-    res.status(200).json({message: "Get products"})
-})
+router.get("/products", adminControllers.getAdminProducts );
 
-router.post("/addProduct", (req, res) => {
-    res.status(204).json({message: "Add products"})
-})
+router.post("/addProduct", adminControllers.addAdminProduct );
 
 module.exports = router;
